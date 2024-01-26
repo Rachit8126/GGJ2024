@@ -4,10 +4,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Event Bus", menuName = "Assets/EventBus")]
 public class EventsSo : ScriptableObject
 {
-    public event Action OnPlayerMove;
+    public event Action<int> OnPlayerMove;
 
-    public void InvokeOnPlayerMove()
+    public void InvokeOnPlayerMove(int direction)
     {
-        OnPlayerMove?.Invoke();
+        OnPlayerMove?.Invoke(direction);
     }
 }

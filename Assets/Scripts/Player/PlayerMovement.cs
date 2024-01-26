@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void ApplyForce(int direction)
     {
-        eventsSo.InvokeOnPlayerMove();
+        eventsSo.InvokeOnPlayerMove(direction);
         Vector2 forceDirection = new Vector2(direction * forceScale, 0f);
         playerRigidBody.AddForce(forceDirection);
     }
