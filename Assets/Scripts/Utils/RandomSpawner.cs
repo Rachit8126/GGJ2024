@@ -24,7 +24,7 @@ public class RandomSpawner : MonoBehaviour
             objectsList.Add(spawnedObj);
         }
 
-        height = spawnHeight;
+        height = spawnHeight / 2;
     }
 
     private void FixedUpdate()
@@ -38,17 +38,15 @@ public class RandomSpawner : MonoBehaviour
 
     private void SpawnNode()
     {
-        if (prevNode != null)
+        while (currNode == prevNode)
         {
-            prevNode = currNode;
-            prevNode.SetActive(false);
+            currNode = objectsList[Random.Range(0, objectsList.Count)];
         }
-
-        currNode = objectsList[Random.Range(0, objectsList.Count)];
         currNode.SetActive(true);
 
         Vector3 position = currNode.transform.position;
         position.y = playerTransform.position.y + spawnOffset;
         currNode.transform.position = position;
+        prevNode = currNode;
     }
 }

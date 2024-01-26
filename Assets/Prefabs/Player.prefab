@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4276354462095950068}
   - component: {fileID: 5187496181397060839}
-  - component: {fileID: 2537377638757110390}
+  - component: {fileID: 3036912106273955777}
   - component: {fileID: 852419402534314173}
   - component: {fileID: 8752349745784977077}
   - component: {fileID: 6648288237745369009}
@@ -98,8 +98,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &2537377638757110390
-BoxCollider2D:
+--- !u!60 &3036912106273955777
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -130,7 +130,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05039072, y: 0.02032131}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -140,9 +140,34 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.261812, y: 1.718021}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.9962742, y: 0.58917195}
+      - {x: 0.78025943, y: 0.5274791}
+      - {x: 0.55309355, y: 0.2388089}
+      - {x: -0.050928622, y: 0.23134667}
+      - {x: 0.0363511, y: 0.70048374}
+      - {x: -0.28342786, y: 0.88257986}
+      - {x: -0.4668456, y: 0.6243098}
+      - {x: -1.0198889, y: 0.70176697}
+      - {x: -0.8456318, y: 0.3707416}
+      - {x: -0.5192295, y: 0.25180423}
+      - {x: -0.29934558, y: 0.020584792}
+      - {x: -0.2463932, y: -0.11065669}
+      - {x: -0.7257771, y: -0.33738896}
+      - {x: -0.7148351, y: -0.5456191}
+      - {x: -0.40508482, y: -0.60315377}
+      - {x: -0.344847, y: -0.8738004}
+      - {x: 0.013856843, y: -0.696371}
+      - {x: 0.22330938, y: -0.8352996}
+      - {x: 0.5351486, y: -0.659205}
+      - {x: 0.5878168, y: -0.8300775}
+      - {x: 0.73225725, y: -0.85855836}
+      - {x: 0.8763504, y: -0.7715477}
+      - {x: 0.8864794, y: -0.37227952}
+      - {x: 0.7109847, y: -0.059190013}
+      - {x: 1.0036932, y: 0.36165372}
+  m_UseDelaunayMesh: 0
 --- !u!95 &852419402534314173
 Animator:
   serializedVersion: 5

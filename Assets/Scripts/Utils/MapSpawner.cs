@@ -6,8 +6,8 @@ public class MapSpawner : MonoBehaviour
     [SerializeField] private Transform playerTransform;
     [SerializeField] private float spawnHeight;
 
-    private GameObject prevNode;
     private GameObject currNode;
+    private GameObject nextNode;
     private float height;
 
     private void FixedUpdate()
@@ -18,20 +18,20 @@ public class MapSpawner : MonoBehaviour
             if (currNode == null)
             {
                 currNode = Instantiate(spawnNode, transform);
+                currNode.transform.position = Vector3.zero;
+                nextNode = Instantiate(spawnNode, transform);
+                Vector3 pos = currNode.transform.position;
+                pos.y += spawnHeight;
+                nextNode.transform.position = pos;
+                return;
             }
 
-            if (prevNode == null)
-            {
-                prevNode = Instantiate(spawnNode, transform);
-            }
-            GameObject temp = prevNode;
-            prevNode = currNode;
-            prevNode.SetActive(false);
-            currNode = temp;
-            currNode.SetActive(true);
-            Vector3 position = currNode.transform.position;
-            position.y = playerTransform.position.y;
+            Vector3 position = nextNode.transform.position;
+            position.y += spawnHeight;
             currNode.transform.position = position;
+            GameObject temp = nextNode;
+            nextNode = currNode;
+            currNode = temp;
         }
     }
 }
