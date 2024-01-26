@@ -501,7 +501,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnNodeArray:
-  - {fileID: 6019534718197514215, guid: 43cdf114f2a667d488efa06e65b216ac, type: 3}
+  - {fileID: 6594994379462140445, guid: 6ec7495d690511147a11c4f4c7e62dba, type: 3}
+  - {fileID: 2819798129019758275, guid: 6e339e124bd956d47b018fdc277b5b12, type: 3}
+  - {fileID: 6735702491532569200, guid: cecd753fe29639940a39ed52dcfffb3a, type: 3}
   playerTransform: {fileID: 1659389776}
   spawnHeight: 48
   spawnOffset: 8
