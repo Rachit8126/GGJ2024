@@ -4,6 +4,7 @@ public class MapSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject spawnNode;
     [SerializeField] private Transform playerTransform;
+    [SerializeField] private float spawnHeight;
 
     private GameObject prevNode;
     private GameObject currNode;
@@ -13,7 +14,7 @@ public class MapSpawner : MonoBehaviour
     {
         if (playerTransform.position.y >= height)
         {
-            height += 4;
+            height += spawnHeight;
             if (currNode == null)
             {
                 currNode = Instantiate(spawnNode, transform);

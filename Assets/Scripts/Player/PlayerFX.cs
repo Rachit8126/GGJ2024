@@ -7,8 +7,8 @@ public class PlayerFX : MonoBehaviour
 
     [SerializeField] private EventsSo eventsSo;
     [SerializeField] private Animator playerAnimator;
-    [SerializeField] private ParticleSystem leftBlowSFX;
-    [SerializeField] private ParticleSystem rightBlowSFX;
+    [SerializeField] private ParticleSystem[] leftBlowSFXArray;
+    [SerializeField] private ParticleSystem[] rightBlowSFXArray;
 
     private void Start()
     {
@@ -26,11 +26,13 @@ public class PlayerFX : MonoBehaviour
     {
         if (direction == 1)
         {
-            leftBlowSFX.Play();
+            int randomIDX = UnityEngine.Random.Range(0, leftBlowSFXArray.Length);
+            leftBlowSFXArray[randomIDX].Play();
         }
         else if (direction == -1)
         {
-            rightBlowSFX.Play();
+            int randomIDX = UnityEngine.Random.Range(0, rightBlowSFXArray.Length);
+            rightBlowSFXArray[randomIDX].Play();
         }
     }
 
