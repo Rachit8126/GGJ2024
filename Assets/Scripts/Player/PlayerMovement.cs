@@ -5,6 +5,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D playerRigidBody;
     [SerializeField] private float raiseSpeed;
     [SerializeField] private float forceScale;
+    [SerializeField] private EventsSo eventsSo;
 
     private void FixedUpdate()
     {
@@ -29,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void ApplyForce(int direction)
     {
+        eventsSo.InvokeOnPlayerMove();
         Vector2 forceDirection = new Vector2(direction * forceScale, 0f);
         playerRigidBody.AddForce(forceDirection);
     }
