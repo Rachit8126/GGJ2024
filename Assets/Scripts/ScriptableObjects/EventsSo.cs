@@ -5,6 +5,12 @@ using UnityEngine;
 public class EventsSo : ScriptableObject
 {
     public event Action<int> OnPlayerMove;
+    public event Action OnPlayerDie;
+
+    public void InvokePlayerDeath()
+    {
+        OnPlayerDie?.Invoke();
+    }
 
     public void InvokeOnPlayerMove(int direction)
     {

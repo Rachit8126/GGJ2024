@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b2cffb728a1d5546a143e05c6994ee8, type: 3}
   m_Name: SFX Asset
   m_EditorClassIdentifier: 
-  balloonSFXClips: []
+  balloonSFXClips:
+  - {fileID: 8300000, guid: 71eacf2155221db4795668e4feba9703, type: 3}
+  - {fileID: 8300000, guid: c62b2d36d70e9f24587341278cd7878b, type: 3}
+  - {fileID: 8300000, guid: 09d31386149482842a609dd27ee6a6b9, type: 3}
+  - {fileID: 8300000, guid: 9c7a3ed8c4b73da47a38d78e9fcdebad, type: 3}
+  - {fileID: 8300000, guid: 744cacdaadfb4de43971bf2ebd78ff71, type: 3}
+  - {fileID: 8300000, guid: bb042483e253b214d826a4afa1693407, type: 3}
+  deathSfx:
+  - {fileID: 8300000, guid: baee8fe966bfce847be800e814f6fb84, type: 3}

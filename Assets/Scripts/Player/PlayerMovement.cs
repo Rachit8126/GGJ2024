@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 
@@ -15,8 +16,30 @@ public class PlayerMovement : MonoBehaviour
         DOTween.Init();
     }
 
+    private void Start()
+    {
+        eventsSo.OnPlayerDie += OnPlayerDie;
+        GameManager.Instance.SetCurrentGameState(GameState.GAMEPLAY);
+    }
+
+    private void OnDestroy()
+    {
+        eventsSo.OnPlayerDie -= OnPlayerDie;
+    }
+
+    private void OnPlayerDie()
+    {
+        playerRigidBody.velocity = Vector3.zero;
+        this.enabled = false;
+    }
+
     private void FixedUpdate()
     {
+        if (GameManager.Instance.CompareStateWithCurrent(GameState.MENU) || GameManager.Instance.CompareStateWithCurrent(GameState.GAMEOVER))
+        {
+            return;
+        }
+
         Vector2 currentVelocity = playerRigidBody.velocity;
         currentVelocity.y = raiseSpeed;
         playerRigidBody.velocity = currentVelocity;
@@ -24,6 +47,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.CompareStateWithCurrent(GameState.MENU) || GameManager.Instance.CompareStateWithCurrent(GameState.GAMEOVER))
+        {
+            return;
+        }
+
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             // Force towards right
