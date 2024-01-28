@@ -1,9 +1,13 @@
 using System;
 using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    [SerializeField] private GameObject startMenu;
     [SerializeField] private Rigidbody2D playerRigidBody;
     [SerializeField] private float rotateBounds;
     [SerializeField] private float raiseSpeed;
@@ -19,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         eventsSo.OnPlayerDie += OnPlayerDie;
-        GameManager.Instance.SetCurrentGameState(GameState.GAMEPLAY);
+        GameManager.Instance.SetCurrentGameState(GameState.MENU);
     }
 
     private void OnDestroy()
@@ -40,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
+
         Vector2 currentVelocity = playerRigidBody.velocity;
         currentVelocity.y = raiseSpeed;
         playerRigidBody.velocity = currentVelocity;
@@ -47,10 +52,24 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+
+        if (GameManager.Instance.CompareStateWithCurrent(GameState.MENU))
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Debug.Log("Space was pressed : Game started");
+                GameManager.Instance.SetCurrentGameState(GameState.GAMEPLAY);
+                startMenu.SetActive(false);
+            }
+        }
+
+
         if (GameManager.Instance.CompareStateWithCurrent(GameState.MENU) || GameManager.Instance.CompareStateWithCurrent(GameState.GAMEOVER))
         {
             return;
         }
+
+
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +19,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (GameManager.Instance.CompareStateWithCurrent(GameState.GAMEOVER))
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(0);
+                Debug.Log("Reloading Scene");
+            }
+        }
+    }
     public GameState GetCurrentGameState()
     {
         return currentGameState;
