@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 578283426847180508}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.72, y: -2.99, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 6.22, y: -2.43, z: 0}
+  m_LocalScale: {x: 0.23475, y: 0.23475, z: 0.23475}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8767741470219832568}
@@ -110,8 +110,8 @@ Transform:
   m_GameObject: {fileID: 1177416054828456032}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.28, y: 0.23, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: -4.69, y: 0.61, z: 0}
+  m_LocalScale: {x: 0.24775, y: 0.24775, z: 0.24775}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8767741470219832568}
@@ -194,8 +194,8 @@ Transform:
   m_GameObject: {fileID: 1419895662976401342}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.53, y: -3.38, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: -0.67, y: -2.91, z: 0}
+  m_LocalScale: {x: 0.27245, y: 0.27245, z: 0.27245}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8767741470219832568}
@@ -315,7 +315,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4, y: 2.13, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.31615, y: 0.31615, z: 0.31615}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8767741470219832568}
@@ -398,8 +398,8 @@ Transform:
   m_GameObject: {fileID: 8548242020677677822}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.19, y: 5.24, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: -3.47, y: 4.53, z: 0}
+  m_LocalScale: {x: 0.17375, y: 0.17375, z: 0.17375}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8767741470219832568}
